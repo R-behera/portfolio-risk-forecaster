@@ -1,0 +1,49 @@
+{
+  "slug": "portfolio-risk-forecaster",
+  "title": "Portfolio Risk Forecaster",
+  "project_type": "ml",
+  "domain": "Asset Management",
+  "summary": "Forecast portfolio stress signals and package scenario summaries for risk committees.",
+  "tags": [
+    "portfolio",
+    "forecasting",
+    "risk"
+  ],
+  "accent": "#588157",
+  "dashboard_metrics": [
+    {
+      "label": "Model Lift",
+      "value": "75%",
+      "delta": "+6.4%"
+    },
+    {
+      "label": "Serving P95",
+      "value": "105ms",
+      "delta": "-12ms"
+    },
+    {
+      "label": "Data Freshness",
+      "value": "4h",
+      "delta": "steady"
+    }
+  ],
+  "sample_features": {
+    "engagement_score": 57,
+    "tenure_days": 135,
+    "payment_miss_count": 3,
+    "segment": "enterprise",
+    "priority_flag": true
+  },
+  "sample_metrics": {
+    "acquisition": 25.5,
+    "activation": 29.5,
+    "retention": 44.0,
+    "revenue": 65.5
+  },
+  "knowledge_base": [
+    "Portfolio Risk Forecaster is positioned as a Asset Management starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Forecast portfolio stress signals and package scenario summaries for risk committees.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on portfolio, forecasting, risk."
+  ]
+}
