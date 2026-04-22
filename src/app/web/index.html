@@ -1,114 +1,29 @@
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Portfolio Risk Forecaster</title>
-          <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body class="surface-mist">
-          <div class="page layout-board eyebrow-solid headline-normal modules-2 hero-align-split">
-            <section class="hero">
-              <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Signal Watchtower</span>
-                <h1 id="project-title">Portfolio Risk Forecaster</h1>
-                <p id="project-summary" class="lead">Forecast portfolio stress signals and package scenario summaries for risk committees.</p>
-                <ul id="project-tags" class="tag-list">
-                  <li>portfolio</li><li>forecasting</li><li>risk</li>
-                </ul>
-              </div>
-              <div class="panel hero-side">
-                <div class="metric-grid">
-                  <article class='card'><span>Model Lift</span><strong>75%</strong><em>+6.4%</em></article>
-<article class='card'><span>Serving P95</span><strong>105ms</strong><em>-12ms</em></article>
-<article class='card'><span>Data Freshness</span><strong>4h</strong><em>steady</em></article>
-                </div>
-                <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Asset Management</strong></article><article class='mini-card'><span>Application</span><strong>Signal Watchtower</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
-                </div>
-              </div>
-            </section>
-            <section class="app-grid">
-              <article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Signal 01</span>
-            <h2>Incident Prioritizer</h2>
-            <p>Simulate how incoming events are scored before they hit an operator queue.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 57,
-    &quot;tenure_days&quot;: 135,
-    &quot;payment_miss_count&quot;: 3,
-    &quot;segment&quot;: &quot;enterprise&quot;,
-    &quot;priority_flag&quot;: true
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Prioritize</button>
-          </div>
-          <pre class="js-output">Risk band and top signals will appear here.</pre>
-        </article>
-<article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Signal 02</span>
-            <h2>Alert Delta Review</h2>
-            <p>Compare current operating metrics with a baseline to explain what changed.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 25.5,
-    &quot;activation&quot;: 29.5,
-    &quot;retention&quot;: 44.0,
-    &quot;revenue&quot;: 65.5
-  },
-  &quot;baseline&quot;: {
-    &quot;acquisition&quot;: 23.46,
-    &quot;activation&quot;: 27.14,
-    &quot;retention&quot;: 40.48,
-    &quot;revenue&quot;: 60.26
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Compare Signals</button>
-          </div>
-          <pre class="js-output">Operational movement summary will appear here.</pre>
-        </article>
-<article class="panel module js-module span-wide">
-          <div class="module-header">
-            <span>Signal 03</span>
-            <h2>Triage Playbook</h2>
-            <p>Generate an action-oriented response plan for the next incident handling step.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for Portfolio Risk Forecaster.&quot;,
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 57,
-    &quot;tenure_days&quot;: 135,
-    &quot;payment_miss_count&quot;: 3,
-    &quot;segment&quot;: &quot;enterprise&quot;,
-    &quot;priority_flag&quot;: true
-  },
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 25.5,
-    &quot;activation&quot;: 29.5,
-    &quot;retention&quot;: 44.0,
-    &quot;revenue&quot;: 65.5
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Build Playbook</button>
-          </div>
-          <pre class="js-output">Suggested next actions and rationale will appear here.</pre>
-        </article>
-            </section>
-            <footer class="footer">
-              <span>Asset Management • ML • Signal Watchtower</span>
-              <span>portfolio-risk-forecaster</span>
-            </footer>
-          </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "portfolio-risk-forecaster", "title": "Portfolio Risk Forecaster", "project_type": "ml", "domain": "Asset Management", "summary": "Forecast portfolio stress signals and package scenario summaries for risk committees.", "tags": ["portfolio", "forecasting", "risk"]}, "app_archetype": "watchtower", "ui_profile": {"layout": "board", "surface": "mist", "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif", "radius": 23, "shadow": 43, "eyebrow_style": "solid", "module_columns": 2, "hero_align": "split", "headline_mode": "normal"}, "app_modules": [{"label": "Signal 01", "title": "Incident Prioritizer", "description": "Simulate how incoming events are scored before they hit an operator queue.", "endpoint": "/score", "input_mode": "json", "cta": "Prioritize", "prefill": "{\n  \"features\": {\n    \"engagement_score\": 57,\n    \"tenure_days\": 135,\n    \"payment_miss_count\": 3,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  }\n}", "hint": "Risk band and top signals will appear here.", "span": "normal"}, {"label": "Signal 02", "title": "Alert Delta Review", "description": "Compare current operating metrics with a baseline to explain what changed.", "endpoint": "/analyze", "input_mode": "json", "cta": "Compare Signals", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 25.5,\n    \"activation\": 29.5,\n    \"retention\": 44.0,\n    \"revenue\": 65.5\n  },\n  \"baseline\": {\n    \"acquisition\": 23.46,\n    \"activation\": 27.14,\n    \"retention\": 40.48,\n    \"revenue\": 60.26\n  }\n}", "hint": "Operational movement summary will appear here.", "span": "normal"}, {"label": "Signal 03", "title": "Triage Playbook", "description": "Generate an action-oriented response plan for the next incident handling step.", "endpoint": "/recommend", "input_mode": "json", "cta": "Build Playbook", "prefill": "{\n  \"prompt\": \"Recommend the next best action for Portfolio Risk Forecaster.\",\n  \"features\": {\n    \"engagement_score\": 57,\n    \"tenure_days\": 135,\n    \"payment_miss_count\": 3,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 25.5,\n    \"activation\": 29.5,\n    \"retention\": 44.0,\n    \"revenue\": 65.5\n  }\n}", "hint": "Suggested next actions and rationale will appear here.", "span": "wide"}], "sample_features": {"engagement_score": 57, "tenure_days": 135, "payment_miss_count": 3, "segment": "enterprise", "priority_flag": true}, "sample_metrics": {"acquisition": 25.5, "activation": 29.5, "retention": 44.0, "revenue": 65.5}, "knowledge_base": ["Portfolio Risk Forecaster is positioned as a Asset Management starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Forecast portfolio stress signals and package scenario summaries for risk committees.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on portfolio, forecasting, risk."], "dashboard_metrics": [{"label": "Model Lift", "value": "75%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "105ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "4h", "delta": "steady"}]}</script>
-          <script src="./app.js"></script>
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Risk Forecaster App</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div id="scene" class="app-scene">
+    <header class="shell hero">
+      <div>
+        <span class="eyebrow">Forecasting and planning</span>
+        <h1>Portfolio Risk Forecaster</h1>
+        <p>![Demo Screenshot](demo/screenshot.png)</p>
+      </div>
+      <aside class="status-card">
+        <div class="pill">API connected</div>
+        <div class="pill">operations planner</div>
+        <div class="pill">depth-columns</div>
+      </aside>
+    </header>
+    <section id="metrics" class="grid metrics"></section>
+    <section id="signals" class="grid signals"></section>
+  </div>
+  <script>window.PROJECT_MANIFEST = {"slug": "portfolio-risk-forecaster", "title": "Portfolio Risk Forecaster", "summary": "![Demo Screenshot](demo/screenshot.png)", "domain": "Forecasting and planning", "audience": "operations planner", "promise": "Make planning models legible to the teams who act on the forecast.", "hero": ["Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.", "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.", "App backend structured for local or container deployment without changing the product narrative."], "kpis": [{"label": "Workflow clarity", "value": "90%", "note": "Operator actions mapped to product stages"}, {"label": "Deployment posture", "value": "API + Docker", "note": "Local and containerized startup paths"}, {"label": "Presentation layer", "value": "3D Pages ready", "note": "Static GitHub landing page included"}], "stages": ["ingest", "validate", "analyze", "decide", "monitor"], "cards": [{"title": "Operator cockpit", "body": "One-screen surface for the operations planner to understand what matters first."}, {"title": "API contract", "body": "Structured endpoints for health, manifest, readiness, and showcase data."}, {"title": "Deployment path", "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."}], "scene": "depth-columns", "theme": {"bg": "#0c0812", "surface": "#171022", "ink": "#f5f0ff", "muted": "#a99bc2", "accent": "#c38fff", "accent2": "#6cf0ff"}, "pages_url": "https://r-behera.github.io/portfolio-risk-forecaster/", "api_examples": {"health": {"status": "ok", "project": "portfolio-risk-forecaster"}, "readiness": {"api": "ready", "landing_page": "docs/index.html", "container": "Dockerfile present"}, "signals": [{"name": "Decision coverage", "status": "strong", "detail": "App and landing narrative aligned"}, {"name": "Operator context", "status": "strong", "detail": "Primary user anchored as operations planner"}, {"name": "Delivery path", "status": "ready", "detail": "Pages + containerized app scaffold generated"}]}};</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
